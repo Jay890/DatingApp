@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 
 import { HttpClient } from '@angular/common/http';
+import { ErrorInterceptorProvider } from './_services/error.interceptor';
 
 @NgModule({
    declarations: [
@@ -27,7 +28,8 @@ import { HttpClient } from '@angular/common/http';
       // HttpClient
    ],
    providers: [
-      AuthService
+      // AuthService,
+      ErrorInterceptorProvider
    ],
    bootstrap: [
       AppComponent
